@@ -1,1 +1,1 @@
-web: java -cp target/classes:target/dependency/* PersonapiApplication
+web: java -Dserver.port=$PORT $JAVA_OPTS -jar target/*.jar
