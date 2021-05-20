@@ -6,13 +6,12 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
 import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 import java.util.List;
 
-@Entity
+
 @Data
 @Builder
 @AllArgsConstructor
@@ -22,11 +21,11 @@ public class PersonDTO {
     private Long id;
 
     @NotEmpty
-    @Size(min = 4, max = 100)
+    @Size(min = 2, max = 100)
     private String firstName;
 
     @NotEmpty
-    @Size(min = 4, max = 100)
+    @Size(min = 2, max = 100)
     private String lastName;
 
     @NotEmpty
@@ -36,5 +35,5 @@ public class PersonDTO {
 
     @NotEmpty
     @Valid
-    private List<PhoneType> phones;
+    private List<PhoneDTO> phones;
 }

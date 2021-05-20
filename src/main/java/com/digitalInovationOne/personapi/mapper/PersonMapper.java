@@ -1,6 +1,5 @@
 package com.digitalInovationOne.personapi.mapper;
 
-//import com.digitalInovationOne.personapi.dto.request.PersonDTO;
 import com.digitalInovationOne.personapi.dto.request.PersonDTO;
 import com.digitalInovationOne.personapi.entity.Person;
 import org.mapstruct.Mapper;
@@ -15,5 +14,5 @@ public interface PersonMapper {
     @Mapping(target = "birthDate", source = "birthDate", dateFormat = "dd-MM-yyyy")
     Person toModel(PersonDTO personDTO);
 
-    //PersonDTO toDTO(Person person);
+    PersonDTO toDTO(Person person);
 }
